@@ -1,0 +1,154 @@
+[
+  {
+    "model": "sorties.classe",
+    "pk": 1,
+    "fields": { "nom_classe": "6ème A", "niveau": "Collège" }
+  },
+  {
+    "model": "sorties.classe",
+    "pk": 2,
+    "fields": { "nom_classe": "6ème B", "niveau": "Collège" }
+  },
+  {
+    "model": "sorties.classe",
+    "pk": 3,
+    "fields": { "nom_classe": "5ème A", "niveau": "Collège" }
+  },
+  {
+    "model": "sorties.classe",
+    "pk": 4,
+    "fields": { "nom_classe": "4ème B", "niveau": "Collège" }
+  },
+  {
+    "model": "sorties.classe",
+    "pk": 5,
+    "fields": { "nom_classe": "3ème A", "niveau": "Collège" }
+  },
+  {
+    "model": "sorties.classe",
+    "pk": 6,
+    "fields": { "nom_classe": "2nde A", "niveau": "Lycée" }
+  },
+  {
+    "model": "sorties.classe",
+    "pk": 7,
+    "fields": { "nom_classe": "1ère S", "niveau": "Lycée" }
+  },
+  {
+    "model": "sorties.classe",
+    "pk": 8,
+    "fields": { "nom_classe": "Terminale ES", "niveau": "Lycée" }
+  },
+  {
+    "model": "sorties.classe",
+    "pk": 9,
+    "fields": { "nom_classe": "CM1 A", "niveau": "Primaire" }
+  },
+  {
+    "model": "sorties.classe",
+    "pk": 10,
+    "fields": { "nom_classe": "CM2 B", "niveau": "Primaire" }
+  },
+
+  {
+    "model": "sorties.enseignant",
+    "pk": 1,
+    "fields": { "nom": "Martin", "prenom": "Sophie", "matiere": "Histoire-Géographie" }
+  },
+  {
+    "model": "sorties.enseignant",
+    "pk": 2,
+    "fields": { "nom": "Dupont", "prenom": "Pierre", "matiere": "Sciences de la Vie et de la Terre" }
+  },
+  {
+    "model": "sorties.enseignant",
+    "pk": 3,
+    "fields": { "nom": "Benali", "prenom": "Fatima", "matiere": "Mathématiques" }
+  },
+  {
+    "model": "sorties.enseignant",
+    "pk": 4,
+    "fields": { "nom": "Lefebvre", "prenom": "Marc", "matiere": "Arts Plastiques" }
+  },
+  {
+    "model": "sorties.enseignant",
+    "pk": 5,
+    "fields": { "nom": "Rousseau", "prenom": "Claire", "matiere": "Français" }
+  },
+  {
+    "model": "sorties.enseignant",
+    "pk": 6,
+    "fields": { "nom": "Karim", "prenom": "Youssef", "matiere": "Éducation Physique et Sportive" }
+  },
+  {
+    "model": "sorties.enseignant",
+    "pk": 7,
+    "fields": { "nom": "Bernard", "prenom": "Hélène", "matiere": "Physique-Chimie" }
+  },
+  {
+    "model": "sorties.enseignant",
+    "pk": 8,
+    "fields": { "nom": "Moreau", "prenom": "Julien", "matiere": "Anglais" }
+  },
+
+  {
+    "model": "sorties.sortie",
+    "pk": 1,
+    "fields": { "ville": "Paris", "date_sortie": "2026-05-10", "classe": 7, "nb_eleves": 28, "responsable": 1 }
+  },
+  {
+    "model": "sorties.sortie",
+    "pk": 2,
+    "fields": { "ville": "Lyon", "date_sortie": "2026-05-03", "classe": 6, "nb_eleves": 32, "responsable": 2 }
+  },
+  {
+    "model": "sorties.sortie",
+    "pk": 3,
+    "fields": { "ville": "Versailles", "date_sortie": "2026-05-06", "classe": 8, "nb_eleves": 25, "responsable": 1 }
+  },
+  {
+    "model": "sorties.sortie",
+    "pk": 4,
+    "fields": { "ville": "Bordeaux", "date_sortie": "2026-06-12", "classe": 5, "nb_eleves": 30, "responsable": 5 }
+  },
+  {
+    "model": "sorties.sortie",
+    "pk": 5,
+    "fields": { "ville": "Strasbourg", "date_sortie": "2026-06-20", "classe": 3, "nb_eleves": 22, "responsable": 8 }
+  },
+  {
+    "model": "sorties.sortie",
+    "pk": 6,
+    "fields": { "ville": "Nice", "date_sortie": "2026-07-02", "classe": 2, "nb_eleves": 27, "responsable": 6 }
+  },
+  {
+    "model": "sorties.sortie",
+    "pk": 7,
+    "fields": { "ville": "Marseille", "date_sortie": "2026-04-15", "classe": 4, "nb_eleves": 35, "responsable": 7 }
+  },
+  {
+    "model": "sorties.sortie",
+    "pk": 8,
+    "fields": { "ville": "Toulouse", "date_sortie": "2026-04-05", "classe": 1, "nb_eleves": 20, "responsable": 3 }
+  },
+  {
+    "model": "sorties.sortie",
+    "pk": 9,
+    "fields": { "ville": "Montpellier", "date_sortie": "2026-06-28", "classe": 9, "nb_eleves": 18, "responsable": 4 }
+  },
+  {
+    "model": "sorties.sortie",
+    "pk": 10,
+    "fields": { "ville": "Nantes", "date_sortie": "2026-07-15", "classe": 10, "nb_eleves": 24, "responsable": 2 }
+  },
+  {
+    "model": "sorties.sortie",
+    "pk": 11,
+    "fields": { "ville": "Lille", "date_sortie": "2026-05-22", "classe": 6, "nb_eleves": 29, "responsable": 5 }
+  },
+  {
+    "model": "sorties.sortie",
+    "pk": 12,
+    "fields": { "ville": "Rennes", "date_sortie": "2026-06-05", "classe": 7, "nb_eleves": 26, "responsable": 8 }
+  }
+]

@@ -1,0 +1,17 @@
+{% extends 'sorties/base.html' %}
+{% block titre %}Confirmer la suppression{% endblock %}
+{% block page_titre %}Confirmer la suppression{% endblock %}
+{% block content %}
+<div class="card" style="max-width:500px;">
+  <div class="card-header bg-danger text-white"><i class="bi bi-exclamation-triangle me-2"></i>Confirmation</div>
+  <div class="card-body">
+    <p class="mb-4">Êtes-vous sûr de vouloir supprimer <strong>{{ type }}</strong> : <strong>{{ objet }}</strong> ?</p>
+    <p class="text-danger small"><i class="bi bi-info-circle me-1"></i>Cette action est irréversible.</p>
+    <form method="post" class="d-flex gap-2 mt-4">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger"><i class="bi bi-trash me-1"></i>Supprimer</button>
+      <a href="javascript:history.back()" class="btn btn-outline-secondary">Annuler</a>
+    </form>
+  </div>
+</div>
+{% endblock %}

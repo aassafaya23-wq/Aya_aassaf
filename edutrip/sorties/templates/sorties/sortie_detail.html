@@ -1,0 +1,78 @@
+{% extends 'sorties/base.html' %}
+
+{% block titre %}Sortie – {{ sortie.ville }}{% endblock %}
+{% block page_titre %}Détail de la sortie{% endblock %}
+{% block page_sous_titre %}{{ sortie.ville }} – {{ sortie.date_sortie|date:"d/m/Y" }}{% endblock %}
+
+{% block topbar_action %}
+<a href="{% url 'sortie_modifier' sortie.pk %}" class="btn btn-warning me-2">
+  <i class="bi bi-pencil me-1"></i>Modifier
+</a>
+<a href="{% url 'sortie_supprimer' sortie.pk %}" class="btn btn-outline-danger">
+  <i class="bi bi-trash me-1"></i>Supprimer
+</a>
+{% endblock %}
+
+{% block content %}
+
+{% if imminente %}
+<div class="alert alert-warning mb-4">
+  <i class="bi bi-alarm-fill me-2"></i>
+  <strong>Attention !</strong> Cette sortie a lieu dans moins de 7 jours. Vérifiez que tout est prêt.
+</div>
+{% endif %}
+
+<div class="row g-4">
+  <div class="col-md-8">
+    <div class="card h-100">
+      <div class="card-header"><i class="bi bi-info-circle me-2"></i>Informations de la sortie</div>
+      <div class="card-body">
+        <table class="table table-borderless">
+          <tr>
+            <th style="width:200px" class="text-muted">Destination</th>
+            <td><strong>{{ sortie.ville }}</strong></td>
+          </tr>
+          <tr>
+            <th class="text-muted">Date</th>
+            <td><i class="bi bi-calendar3 me-1 text-primary"></i>{{ sortie.date_sortie|date:"l d F Y" }}</td>
+          </tr>
+          <tr>
+            <th class="text-muted">Classe participante</th>
+            <td><span class="badge bg-primary fs-6">{{ sortie.classe }}</span></td>
+          </tr>
+          <tr>
+            <th class="text-muted">Nombre d'élèves</th>
+            <td><i class="bi bi-people me-1 text-success"></i>{{ sortie.nb_eleves }} élèves</td>
+          </tr>
+          <tr>
+            <th class="text-muted">Responsable</th>
+            <td><i class="bi bi-person-badge me-1 text-purple"></i>{{ sortie.responsable }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card h-100">
+      <div class="card-header"><i class="bi bi-person-badge me-2"></i>Responsable</div>
+      <div class="card-body text-center py-4">
+        <div style="width:80px; height:80px; background:linear-gradient(135deg,#1a4f8a,#2e86c1); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 15px;">
+          <i class="bi bi-person-fill text-white" style="font-size:2rem;"></i>
+        </div>
+        {% if sortie.responsable %}
+        <h5 class="fw-bold">{{ sortie.responsable.prenom }} {{ sortie.responsable.nom }}</h5>
+        <p class="text-muted mb-0">{{ sortie.responsable.matiere }}</p>
+        {% else %}
+        <p class="text-muted">Aucun responsable assigné</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4">
+  <a href="{% url 'sortie_liste' %}" class="btn btn-outline-secondary">
+    <i class="bi bi-arrow-left me-1"></i>Retour à la liste
+  </a>
+</div>
+{% endblock %}
